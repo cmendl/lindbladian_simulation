@@ -21,7 +21,9 @@ def lindblad_operator_matrix(L):
     """
     L = np.asarray(L)
     n = L.shape[0]
-    return np.kron(L, L.conj()) - 0.5 * (np.kron(L.conj().T @ L, np.identity(n)) + np.kron(np.identity(n), L.T @ L.conj()))
+    return (np.kron(L, L.conj())
+            - 0.5 * (np.kron(L.conj().T @ L, np.identity(n))
+                   + np.kron(np.identity(n), L.T @ L.conj())))
 
 
 def apply_lindbladian(Llist, rho):

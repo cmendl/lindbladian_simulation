@@ -13,8 +13,7 @@ class TestLindbladian(unittest.TestCase):
         d = 5
 
         # fictitious density matrix
-        rho = lbs.crandn((d, d), rng)
-        rho = 0.5 * (rho + rho.conj().T)
+        rho = lbs.random_density_matrix(d, rng)
 
         # Lindblad jump operator
         L = lbs.crandn((d, d), rng)
@@ -35,8 +34,7 @@ class TestLindbladian(unittest.TestCase):
         numops = 4
 
         # fictitious density matrix
-        rho = lbs.crandn((d, d), rng)
-        rho = 0.5 * (rho + rho.conj().T)
+        rho = lbs.random_density_matrix(d, rng)
 
         # Lindblad jump operators
         Llist = [lbs.crandn((d, d), rng) for _ in range(numops)]
