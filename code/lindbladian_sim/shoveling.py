@@ -2,9 +2,9 @@ import numpy as np
 from scipy.special import erf
 
 
-def construct_shuffling_lindblad_operator(A, H, f):
+def construct_shoveling_lindblad_operator(A, H, f):
     """
-    Construct the "shuffling" Lindblad operator, Eq. (4).
+    Construct the "shoveling" Lindblad operator, Eq. (4).
 
     Reference:
         Zhiyan Ding, Chi-Fang (Anthony) Chen, Lin Lin
